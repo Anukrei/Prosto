@@ -62,9 +62,9 @@ function Images(arraY) {
     <img src="./images/${arraY[7]}"class="imgItem"id= '${arraY[7]}'  draggable="true" />
   </div>
 
-  // <div class="imagesBox" id="imgItemHi">
-  //   <img src="./images/${arraY[8]}"class="imgItem" id= '${arraY[8]}' draggable="true" />
-  // </div>
+   <div class="imagesBox" id="imgItemHi">
+     <img src="./images/${arraY[8]}"class="imgItem" id= '${arraY[8]}' draggable="true" />
+ </div>
   
   <div class="imagesBox">
     <img src="./images/${arraY[9]}"class="imgItem" id= '${arraY[9]}' draggable="true" />
@@ -73,8 +73,6 @@ function Images(arraY) {
   `;
 }
 
-
-//
 
 
   Images(arr);
