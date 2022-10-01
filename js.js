@@ -34,7 +34,7 @@ function Images(arraY) {
          
     </div>
   <div class="imagesBox">
-  <img src="/images/Page10.png" class="imgItem MAchsa" draggable="true">
+  <img src="./images/Page10.png" class="imgItem MAchsa" draggable="true">
   </div>
   <div class="imagesBox">
   
