@@ -38,36 +38,36 @@ function Images(arraY) {
   </div>
   <div class="imagesBox">
   
-    <img src="/images/${arraY[0]}"class="imgItem" id= '${arraY[0]}' draggable="true" />
+    <img src="./images/${arraY[0]}"class="imgItem" id= '${arraY[0]}' draggable="true" />
   </div>
   <div class="imagesBox">
-    <img src="/images/${arraY[1]}" class="imgItem" id= '${arraY[1]}' draggable="true" />
+    <img src="./images/${arraY[1]}" class="imgItem" id= '${arraY[1]}' draggable="true" />
   </div>
   <div class="imagesBox">
-    <img src="/images/${arraY[2]}"  class="imgItem"id= '${arraY[2]}' draggable="true" />
+    <img src="./images/${arraY[2]}"  class="imgItem"id= '${arraY[2]}' draggable="true" />
   </div>
   <div class="imagesBox">
-    <img src="/images/${arraY[3]}" class="imgItem"id= '${arraY[3]}' draggable="true" />
+    <img src="./images/${arraY[3]}" class="imgItem"id= '${arraY[3]}' draggable="true" />
   </div>
   <div class="imagesBox">
-    <img src="/images/${arraY[4]}" class="imgItem"id= '${arraY[4]}' draggable="true" />
+    <img src="./images/${arraY[4]}" class="imgItem"id= '${arraY[4]}' draggable="true" />
   </div>
   <div class="imagesBox" id="ball" >
-    <img src="/images/${arraY[5]}"class="imgItem" id= '${arraY[5]}'draggable="true" />
+    <img src="./images/${arraY[5]}"class="imgItem" id= '${arraY[5]}'draggable="true" />
   </div>
   <div class="imagesBox">
-    <img src="/images/${arraY[6]}"class="imgItem"id= '${arraY[6]}' draggable="true" />
+    <img src="./images/${arraY[6]}"class="imgItem"id= '${arraY[6]}' draggable="true" />
   </div>
   <div class="imagesBox">
-    <img src="/images/${arraY[7]}"class="imgItem"id= '${arraY[7]}'  draggable="true" />
+    <img src="./images/${arraY[7]}"class="imgItem"id= '${arraY[7]}'  draggable="true" />
   </div>
 
   // <div class="imagesBox" id="imgItemHi">
-  //   <img src="/images/${arraY[8]}"class="imgItem" id= '${arraY[8]}' draggable="true" />
+  //   <img src="./images/${arraY[8]}"class="imgItem" id= '${arraY[8]}' draggable="true" />
   // </div>
   
   <div class="imagesBox">
-    <img src="/images/${arraY[9]}"class="imgItem" id= '${arraY[9]}' draggable="true" />
+    <img src="./images/${arraY[9]}"class="imgItem" id= '${arraY[9]}' draggable="true" />
   </div>
 </div>
   `;
