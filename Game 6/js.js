@@ -140,3 +140,29 @@ function fnFalse() {
   }
 
 }
+
+
+
+fn()
+function fn (){
+  const boxImage = document.querySelectorAll('.boxImages')
+  const boxImage1ad = document.querySelector('.boxImages')
+
+  boxImage.forEach((i)=>{
+  let res = i.querySelectorAll('img')
+
+
+  let sorted = [...res].sort(() => Math.random() - 0.5);
+
+  boxImage1ad.innerHTML = '';
+  
+  for (let li of sorted) {
+   
+    boxImage1ad.appendChild(li);
+  }
+  })
+}
+
+
+
+
