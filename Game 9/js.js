@@ -3,7 +3,7 @@ let round = document.querySelector(".round");
 
 let isProverkaTrue = true;
 
-let arr = ["A.m4a", "AU.mp3", "AUA.mp3", "U.mp3","UA.mp3","UAU.mp3"];
+let arr = ["А.m4a","АУ.mp3","АУЫ.mp3","У.mp3","УА.mp3", "УЫ.mp3","Ы.mp3","ЫАЫ.mp3","ЫУ.mp3"];
 
 function Images(arraY) {
 
@@ -16,15 +16,15 @@ function Images(arraY) {
   
   <div class="headdiv">
   <div id="container" class="cont">
-  <div class="boxImg"><img src="images/Page1.png" class='pro' id='A.m4a'alt=""> </div>
-  <div class="boxImg"><img src="images/Page2.png" class='pro' id='U.mp3'class='pro' alt=""></div>
-  <div class="boxImg"><img src="images/Page3.png" class='pro' id='UA.mp3'alt=""></div>
-  <div class="boxImg"><img src="images/Page4.png" class='pro' id='AU.mp3' alt=""></div>  
-  <div class="boxImg"><img src="images/Page5.png" class='pro' id='AUA.mp3'alt=""></div>  
-  <div class="boxImg"><img src="images/Page6.png" class='pro' id='UAU.mp3'alt=""></div>  
-  <div class="boxImg"><img src="images/Page7.png" class='pro' id='aw6.mp3'alt=""></div>  
-  <div class="boxImg"><img src="images/Page8.png" class='pro' id='aw7.mp3'alt=""></div>  
-  <div class="boxImg"><img src="images/Page9.png" class='pro' id='aw8.mp3'alt=""></div>  
+  <div class="boxImg"><img src="images/Page1.png" class='pro' id='УЫ.mp3'alt=""> </div>
+  <div class="boxImg"><img src="images/Page2.png" class='pro' id='А.m4a'class='pro' alt=""></div>
+  <div class="boxImg"><img src="images/Page3.png" class='pro' id='УА.mp3'alt=""></div>
+  <div class="boxImg"><img src="images/Page4.png" class='pro' id='АУЫ.mp3' alt=""></div>  
+  <div class="boxImg"><img src="images/Page5.png" class='pro' id='УЫ.mp3'alt=""></div>  
+  <div class="boxImg"><img src="images/Page6.png" class='pro' id='АУ.mp3'alt=""></div>  
+  <div class="boxImg"><img src="images/Page7.png" class='pro' id='У.mp3'alt=""></div>  
+  <div class="boxImg"><img src="images/Page8.png" class='pro' id='ЫАЫ.mp3'alt=""></div>  
+  <div class="boxImg"><img src="images/Page9.png" class='pro' id='ЫУ.mp3'alt=""></div>  
 </div>
 </div>
 
@@ -122,24 +122,30 @@ function fn (){
 
 
 function sondePositive() {
-  isProverkaTrue = false;
+  if(isProverkaTrue){
+    isProverkaTrue= false
+    let aud = new Audio();
+    aud.src = "sonds/TrueApp.mp3";
+    aud.play();
+    aud.onended = () => {
+      isProverkaTrue = true;
+  }
 
-  let aud = new Audio();
-  aud.src = "sonds/TrueApp.mp3";
-  aud.play();
-  aud.onended = () => {
-    isProverkaTrue = true;
+
   };
 }
 
 function sondeNegative() {
-  isProverkaTrue = false;
-  const aud1 = new Audio();
-  aud1.id = "aux";
-  aud1.src = "sonds/FalseApp.mp3";
-  aud1.play();
-  aud1.onended = () => {
-    isProverkaTrue = true;
-  };
+  if(isProverkaTrue){
+    isProverkaTrue= false
+    const aud1 = new Audio();
+    aud1.id = "aux";
+    aud1.src = "sonds/FalseApp.mp3";
+    aud1.play();
+    aud1.onended = () => {
+      isProverkaTrue = true;
+    };
+  }
+
 }
 

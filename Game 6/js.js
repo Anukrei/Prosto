@@ -40,6 +40,7 @@ bImages.forEach((i)=>{
       ee.style.height = '100px'
       ee.style.marginLeft = '-20px'
       e.target.append(document.getElementById(item))
+      ee.draggable = false
      }else{
       fnFalse()
      }
@@ -56,6 +57,7 @@ bImages.forEach((i)=>{
       ee.style.height = '100px'
       ee.style.marginLeft = '-20px'
       e.target.append(document.getElementById(item))
+      ee.draggable = false
      }else{
       fnFalse()
      }
@@ -72,6 +74,7 @@ bImages.forEach((i)=>{
       ee.style.height = '100px'
       ee.style.marginLeft = '-20px'
       e.target.append(document.getElementById(item))
+      ee.draggable = false
      }else{
       fnFalse()
      }
@@ -88,6 +91,7 @@ bImages.forEach((i)=>{
       ee.style.height = '100px'
       ee.style.marginLeft = '-20px'
       e.target.append(document.getElementById(item))
+      ee.draggable = false
      }else{
       fnFalse()
      }
@@ -104,6 +108,7 @@ bImages.forEach((i)=>{
       ee.style.height = '100px'
       ee.style.marginLeft = '-20px'
       e.target.append(document.getElementById(item))
+      ee.draggable = false
      }else{
       fnFalse()
      }

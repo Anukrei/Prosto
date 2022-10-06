@@ -1,152 +1,204 @@
-let imagesCollect = document.querySelector(".z2");
-let round = document.querySelector(".round");
+let b1 = document.getElementById('b1')
+let b2 = document.getElementById('b2')
 
-let isProverkaTrue = true;
 
-let arr = [
-  "Page9.png",
-  "Page8.png",
-  "Page7.png",
-  "Page6.png",
-  "Page5.png",
-  "Page4.png",
-  "Page3.png",
-  "Page2.png",
-  "Page1.png",
-  "Page11.png",
-].sort(() => {
-  return Math.random() - 0.5;
-});
+
+let b6 = document.getElementById('b6')
+let b7 = document.getElementById('b7')
+let b8 = document.getElementById('b8')
+let b9 = document.getElementById('b9')
 
 
 
 
 
+let isProverkaTrue = true
+let bImages = document.querySelectorAll('.boxImages')
 
-function Images(arraY) {
-  console.log(arraY);
-  imagesCollect.innerHTML = `
-  <div id="container" class="cont">
-  <div class="numberSocces">
+let arr = ['FalseApp.mp3', 'TrueApp.mp3']
+b1.ondragover = allowDrop
+b2.ondragover = allowDrop
 
-        <p class="SoccesTrue" id='SocTrue'>Правильные ответы: 0</p>&nbsp&nbsp
-        <p class="SoccesFalse" id='SocFalse'> Неправильные ответы:0 </p>
-         
-    </div>
-  <div class="imagesBox">
-  <img src="/images/Page10.png" class="imgItem MAchsa" draggable="true">
-  </div>
-  <div class="imagesBox">
-  
-    <img src="images/${arraY[0]}"class="imgItem" id= '${arraY[0]}' draggable="true" />
-  </div>
-  <div class="imagesBox">
-    <img src="images/${arraY[1]}" class="imgItem" id= '${arraY[1]}' draggable="true" />
-  </div>
-  <div class="imagesBox">
-    <img src="images/${arraY[2]}"  class="imgItem"id= '${arraY[2]}' draggable="true" />
-  </div>
-  <div class="imagesBox">
-    <img src="images/${arraY[3]}" class="imgItem"id= '${arraY[3]}' draggable="true" />
-  </div>
-  <div class="imagesBox">
-    <img src="images/${arraY[4]}" class="imgItem"id= '${arraY[4]}' draggable="true" />
-  </div>
-  <div class="imagesBox" id="ball" >
-    <img src="images/${arraY[5]}"class="imgItem" id= '${arraY[5]}'draggable="true" />
-  </div>
-  <div class="imagesBox">
-    <img src="images/${arraY[6]}"class="imgItem"id= '${arraY[6]}' draggable="true" />
-  </div>
-  <div class="imagesBox">
-    <img src="images/${arraY[7]}"class="imgItem"id= '${arraY[7]}'  draggable="true" />
-  </div>
 
-  // <div class="imagesBox" id="imgItemHi">
-  //   <img src="images/${arraY[8]}"class="imgItem" id= '${arraY[8]}' draggable="true" />
-  // </div>
-  
-  <div class="imagesBox">
-    <img src="images/${arraY[9]}"class="imgItem" id= '${arraY[9]}' draggable="true" />
-  </div>
-</div>
-  `;
+
+b6.ondragover = allowDrop
+b7.ondragover = allowDrop
+b8.ondragover = allowDrop
+b9.ondragover = allowDrop
+
+
+
+
+
+
+
+
+
+
+function allowDrop(e){
+e.preventDefault()
+}
+bImages.forEach((i)=>{
+ let res = i.querySelectorAll('.containerIMG')
+ console.log(res)
+  res.forEach((i,index)=>{
+   let resa= i.querySelector('img')
+   resa.ondragstart = dragFn
+   function dragFn(e){
+     e.dataTransfer.setData('id', e.target.id)
+   }
+   b1.ondrop = dropFn1
+   function dropFn1(e){
+     let item = e.dataTransfer.getData('id')
+     console.log(item)
+     if(item==='img1.png'||item==='img2.png'){
+      fnTrue()
+      let a = e.target.id
+      let ee = document.getElementById(item)
+      ee.style.width = '150px'
+      ee.style.height = '150px'
+      e.target.append(document.getElementById(item))
+      ee.draggable = false
+      
+     }else{
+      fnFalse()
+     }
+   }
+   b2.ondrop = dropFn2
+   function dropFn2(e){
+     let item = e.dataTransfer.getData('id')
+     console.log(item)
+     if(item==='img1.png'||item==='img2.png'){
+      fnTrue()
+      let a = e.target.id
+      let ee = document.getElementById(item)
+      ee.style.width = '150px'
+      ee.style.height = '150px'
+      e.target.append(document.getElementById(item))
+      ee.draggable = false
+     }else{
+      fnFalse()
+     }
+   }
+
+
+
+   b6.ondrop = dropFn6
+   function dropFn6(e){
+     let item = e.dataTransfer.getData('id')
+     console.log(item)
+     if(item==='img3.png'||item==='img4.png'||item==='img5.png'||item==='img6.png'){
+      fnTrue()
+      let a = e.target.id
+      let ee = document.getElementById(item)
+      ee.style.width = '150px'
+      ee.style.height = '150px'
+      e.target.append(document.getElementById(item))
+      ee.draggable = false
+     }else{
+      fnFalse()
+     }
+   }
+   b7.ondrop = dropFn7
+   function dropFn7(e){
+     let item = e.dataTransfer.getData('id')
+     console.log(item)
+     if(item==='img3.png'||item==='img4.png'||item==='img5.png'||item==='img6.png'){
+      fnTrue()
+      let a = e.target.id
+      let ee = document.getElementById(item)
+      ee.style.width = '150px'
+      ee.style.height = '150px'
+      e.target.append(document.getElementById(item))
+      ee.draggable = false
+     }else{
+      fnFalse()
+     }
+   }
+   b8.ondrop = dropFn8
+   function dropFn8(e){
+     let item = e.dataTransfer.getData('id')
+     console.log(item)
+     if(item==='img3.png'||item==='img4.png'||item==='img5.png'||item==='img6.png'){
+      fnTrue()
+      let a = e.target.id
+      let ee = document.getElementById(item)
+      ee.style.width = '150px'
+      ee.style.height = '150px'
+      e.target.append(document.getElementById(item))
+      ee.draggable = false
+     }else{
+      fnFalse()
+     }
+   }
+   b9.ondrop = dropFn9
+   function dropFn9(e){
+     let item = e.dataTransfer.getData('id')
+     console.log(item)
+     if(item==='img3.png'||item==='img4.png'||item==='img5.png'||item==='img6.png'){
+      fnTrue()
+      let a = e.target.id
+      let ee = document.getElementById(item)
+      ee.style.width = '150px'
+      ee.style.height = '150px'
+      ee.style.marginTop = '-30px'
+      e.target.append(document.getElementById(item))
+      ee.draggable = false
+     }else{
+      fnFalse()
+     }
+   }
+
+
+  })
+})
+
+
+
+function fnTrue() {
+  if (isProverkaTrue) {
+    isProverkaTrue = false;
+    let aud = new Audio();
+    aud.src = `Sonds/${arr[1]}`;
+    aud.play();
+    aud.onended = () => {
+      isProverkaTrue = true;
+
+    };
+  }
+
+}
+function fnFalse() {
+  if (isProverkaTrue) {
+    isProverkaTrue = false;
+    let aud = new Audio();
+    aud.src = `Sonds/${arr[0]}`;
+    aud.play();
+    aud.onended = () => {
+      isProverkaTrue = true;
+
+    };
+  }
+
 }
 
 
-//
+fn()
+function fn (){
+  const boxImage = document.querySelectorAll('.boxImages')
+  const boxImage1ad = document.querySelector('.boxImages')
+
+  boxImage.forEach((i)=>{
+  let res = i.querySelectorAll('img')
 
 
-  Images(arr);
+  let sorted = [...res].sort(() => Math.random() - 0.5);
 
-  let AswerTrue = 0;
-  let AswerFalse = 0;
-
-  function AswerTrueFn() {
-    AswerTrue++;
-    return (document.getElementById(
-      "SocTrue"
-    ).innerHTML = `Правильные ответы ${AswerTrue}`);
+  boxImage1ad.innerHTML = '';
+  
+  for (let li of sorted) {
+   
+    boxImage1ad.appendChild(li);
   }
-
-
-
-
-  function AswerFalseFn() {
-    AswerFalse++;
-    let res =  document.getElementById(
-      "SocFalse"
-    )
-
-    res.innerHTML = `Неправильные ответы ${AswerFalse}`
-    
-  }
-
-
-
-
-  let imagesCollectDone = document.querySelectorAll(".cont");
-
-  imagesCollectDone.forEach(() => {
-    let imagesItem = this.document.querySelectorAll("img");
-    console.log(imagesItem);
-    imagesItem.forEach((i, index) => {
-      i.addEventListener("click", (e) => {
-        console.log(e.target.id==='Page5.png')
-        if ((e.target.id !=='Page5.png'&&e.target.id !=='Page8.png'&&e.target.id !=='Page1.png')) {
-          
-          if (isProverkaTrue) {
-            e.target.style.border = '3px solid green'
-            AswerTrueFn();
-            sondePositive();
-          }
-        } else {
-          if (isProverkaTrue) {
-            AswerFalseFn()
-            sondeNegative();
-          }
-        }
-      });
-    });
-    function sondePositive() {
-      isProverkaTrue = false;
-
-      let aud = new Audio();
-      aud.src = "00397_FbVsvNYg.mp3";
-      aud.play();
-      aud.onended = () => {
-        isProverkaTrue = true;
-      };
-    }
-
-    function sondeNegative() {
-      isProverkaTrue = false;
-      const aud1 = new Audio();
-      aud1.id = "aux";
-      aud1.src = "__kirbydx__wah-wah-sad-trombone.mp3";
-      aud1.play();
-      aud1.onended = () => {
-        isProverkaTrue = true;
-      };
-    }
-  });
+  })
+}

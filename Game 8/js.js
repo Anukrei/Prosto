@@ -101,7 +101,7 @@ function Images(arraY) {
     imagesItem.forEach((i, index) => {
       i.addEventListener("click", (e) => {
    
-        if ((e.target.id =='Page1.png'||e.target.id =='Page2.png'||e.target.id =='Page3.png'||e.target.id =='Page4.png'||e.target.id =='Page9.png')) {
+        if ((e.target.id =='Page1.png'||e.target.id =='Page2.png'||e.target.id =='Page3.png'||e.target.id =='Page4.png'||e.target.id =='Page8.png'||e.target.id =='Page9.png')) {
           
           if (isProverkaTrue) {
             e.target.style.border = '1px solid green'
